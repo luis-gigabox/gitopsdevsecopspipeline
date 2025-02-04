@@ -14,3 +14,5 @@ Sonar Token = sqp_2c615cfdaf8d2310cd74cc391fa0894091a92443
 Sonar Project Key = gitopsdevsecopspipeline
 Sonar URL = http://ec2-3-145-199-202.us-east-2.compute.amazonaws.com:9000"# gitopsdevsecopspipeline" 
 "# gitopsdevsecopspipeline" 
+docker login -u manalacluis
+dckr_pat_ZD_vAyhkrDdu9rEgwoCvrX8H3yo
