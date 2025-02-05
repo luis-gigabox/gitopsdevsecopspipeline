@@ -86,7 +86,7 @@ jobs:
            
       - name: Check GIT_USERNAME length
         run: |
-            echo "Length of GIT_USERNAME: ${#${{ secrets.GIT_USERNAME }}}"
+            echo "Length of GIT_USERNAME: $(echo ${{ secrets.GIT_USERNAME }} | wc -c)"
       - name: Update Deployment YAML
         run: |
           git pull
