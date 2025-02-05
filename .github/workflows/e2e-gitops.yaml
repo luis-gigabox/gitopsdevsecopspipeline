@@ -83,7 +83,10 @@ jobs:
         run: |
            git config --global user.email "${{ secrets.GIT_EMAIL}}"
            git config --global user.name "${{ secrets.GIT_USERNAME}}"
- 
+           
+      - name: Check GIT_USERNAME length
+        run: |
+            echo "Length of GIT_USERNAME: ${#${{ secrets.GIT_USERNAME }}}"
       - name: Update Deployment YAML
         run: |
           git pull
@@ -93,3 +96,5 @@ jobs:
           git add deployment.yaml version.txt
           git commit -m "Updated deployment yaml and version txt file with supermario image tag to ${CURRENT_VERSION}"
           git push
+
+      
